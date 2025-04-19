@@ -6,5 +6,7 @@
 int main(void)
 {
     TempSensorInit();
+
+    while(1){}
 	return 0;
 }

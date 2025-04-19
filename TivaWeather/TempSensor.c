@@ -1,20 +1,20 @@
 #include "main.h"
 
 /*
- * Initializes the LM45 Temperature sensor on the Alice Edubase Board. It is connected to PE5 and uses AIN8.
+ * Initializes the LM45 Temperature sensor on the Alice Edubase Board. It is connected to PE5 & uses AIN8.
  * */
 void TempSensorInit()
 {
     gpio_port_init(PORTE);
 
     //Set GPIO Port E Pin 5 to use AFSEL.
-    (*((volatile uint32_t *)(GPIOAFSEL))) |= (1 << 5);
+    (*((volatile uint32_t *)(GPIOPORTE + GPIOAFSEL))) |= (1 << 5);
 
     //Set GPIO Port E Pin 5 to be analog.
-    (*((volatile uint32_t *)(GPIODEN))) &= ~(1 << 5);
+    (*((volatile uint32_t *)(GPIOPORTE + GPIODEN))) &= ~(1 << 5);
 
     //Set GPIO Port E Pin 5 to select GPIO analog mode.
-    (*((volatile uint32_t *)(GPIOAMSEL))) |= (1 << 5);
+    (*((volatile uint32_t *)(GPIOPORTE + GPIOAMSEL))) |= (1 << 5);
 
     adc_module_init(0);
     configure_PLL();

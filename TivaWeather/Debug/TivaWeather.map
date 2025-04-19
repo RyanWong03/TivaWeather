@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Sat Apr 19 13:20:35 2025
+>> Linked Sat Apr 19 15:00:04 2025
 
 OUTPUT FILE NAME:   <TivaWeather.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 00000311
@@ -11,7 +11,7 @@ MEMORY CONFIGURATION
 
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
-  FLASH                 00000000   00100000  00000372  000ffc8e  R  X
+  FLASH                 00000000   00100000  00000370  000ffc90  R  X
   SRAM                  20000000   00040000  00000200  0003fe00  RW X
 
 
@@ -19,9 +19,9 @@ SEGMENT ALLOCATION MAP
 
 run origin  load origin   length   init length attrs members
 ----------  ----------- ---------- ----------- ----- -------
-00000000    00000000    00000372   00000372    r-x
+00000000    00000000    00000370   00000370    r-x
   00000000    00000000    00000208   00000208    r-- .intvecs
-  00000208    00000208    0000016a   0000016a    r-x .text
+  00000208    00000208    00000168   00000168    r-x .text
 20000000    20000000    00000200   00000000    rw-
   20000000    20000000    00000200   00000000    rw- .stack
 
@@ -34,15 +34,15 @@ section   page    origin      length       input sections
 .intvecs   0    00000000    00000208     
                   00000000    00000208     tm4c1294ncpdt_startup_ccs.obj (.intvecs)
 
-.text      0    00000208    0000016a     
+.text      0    00000208    00000168     
                   00000208    000000b8     ADC.obj (.text)
                   000002c0    00000050     TempSensor.obj (.text)
                   00000310    0000002c     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs:_c_int00_noinit_noargs)
                   0000033c    00000018     GPIO.obj (.text)
                   00000354    0000000c     tm4c1294ncpdt_startup_ccs.obj (.text)
-                  00000360    0000000a     main.obj (.text)
-                  0000036a    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
-                  0000036e    00000004                                   : exit.c.obj (.text:abort:abort)
+                  00000360    00000008     main.obj (.text)
+                  00000368    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  0000036c    00000004                                   : exit.c.obj (.text:abort:abort)
 
 .cinit     0    00000000    00000000     UNINITIALIZED
 
@@ -65,9 +65,9 @@ MODULE SUMMARY
        ADC.obj                         184    0         0      
        TempSensor.obj                  80     0         0      
        GPIO.obj                        24     0         0      
-       main.obj                        10     0         0      
+       main.obj                        8      0         0      
     +--+-------------------------------+------+---------+---------+
-       Total:                          310    520       0      
+       Total:                          308    520       0      
                                                                
     C:\ti\ccs1260\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
        boot_cortex_m.c.obj             44     0         0      
@@ -78,14 +78,14 @@ MODULE SUMMARY
                                                                
        Stack:                          0      0         512    
     +--+-------------------------------+------+---------+---------+
-       Grand Total:                    362    520       512    
+       Grand Total:                    360    520       512    
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
 
 address   name                   
 -------   ----                   
-0000036f  C$$EXIT                
+0000036d  C$$EXIT                
 00000355  ResetISR               
 000002c1  TempSensorInit         
 20000200  __STACK_END            
@@ -102,8 +102,8 @@ UNDEFED   __mpu_init
 20000000  __start___llvm_prf_cnts
 20000000  __stop___llvm_prf_cnts 
 00000311  _c_int00_noinit_noargs 
-0000036b  _system_pre_init       
-0000036f  abort                  
+00000369  _system_pre_init       
+0000036d  abort                  
 0000022f  adc_module_init        
 00000247  adc_sequencer_init     
 ffffffff  binit                  
@@ -128,9 +128,9 @@ address   name
 0000033d  gpio_port_init         
 00000355  ResetISR               
 00000361  main                   
-0000036b  _system_pre_init       
-0000036f  C$$EXIT                
-0000036f  abort                  
+00000369  _system_pre_init       
+0000036d  C$$EXIT                
+0000036d  abort                  
 20000000  __stack                
 20000000  __start___llvm_prf_cnts
 20000000  __stop___llvm_prf_cnts 

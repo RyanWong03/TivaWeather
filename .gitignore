@@ -1,0 +1,7 @@
+*
+
+!main.c
+!ADC.c
+!ADC.h
+!tm4c1294ncpdt_startup_ccs.c
+!.gitignore

@@ -1,8 +1,8 @@
-/*
- * ADC.h
- *
- *  Created on: Apr 19, 2025
- *      Author: ryanw
- */
+#ifndef DEFS_H_
+#define DEFS_H_
 
+#define RCGCADC     0x400FE638
+#define ADC_BASE    0x40038000
+#define RCGCGPIO    0x400FE608
 
+#endif /* DEFS_H_ */

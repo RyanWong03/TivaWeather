@@ -39,9 +39,3 @@ void adc_sequencer_init(int module_id, int sequencer_id, int trigger_event, int 
     //Configuration done. Enable SS3.
     (*((volatile uint32_t *)(adc_addr))) |= (1 << sequencer_id);
 }
-
-void gpio_port_init(int port)
-{
-    //Enable clock to GPIO Port.
-    (*((volatile uint32_t *)(RCGCGPIO))) |= port;
-}

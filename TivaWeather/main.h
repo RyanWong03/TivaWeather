@@ -8,6 +8,7 @@
 
 //Local includes
 #include "ADC.h"
+#include "GPIO.h"
 
 
 #endif /* MAIN_H_ */

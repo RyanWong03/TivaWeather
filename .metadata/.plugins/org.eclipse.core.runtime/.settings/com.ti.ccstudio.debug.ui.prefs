@@ -1,0 +1,6 @@
+MODULES_MRU_PATH=C\:\\Users\\ryanw\\Downloads\\TivaWeather\\TivaWeather\\Debug\\TivaWeather.out\#THREAD_IDS\#Stellaris In-Circuit Debug Interface/CORTEX_M4_0
+RELOAD_PROGRAM_IF_CHANGED=always
+eclipse.preferences.version=1
+symbolAutoCompleteHistory<seperator>org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser<seperator>Stellaris\ In-Circuit\ Debug\ Interface\\CORTEX_M4_0=0x200001B8,0x200001D0
+symbolAutoCompleteHistory<seperator>org.eclipse.cdt.dsf.debug.ui.disassembly.view<seperator>Stellaris\ In-Circuit\ Debug\ Interface\\CORTEX_M4_0=0x0000027E,0x000002CC
+useAnnotationsPrefPage=true

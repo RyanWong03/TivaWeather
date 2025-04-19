@@ -1,0 +1,190 @@
+//Global includes
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+//Custom includes
+#include "ADC.h"
+
+extern int test_new_tiva(void);
+void output_character(char character);
+
+void serial_init()
+{
+    /* Provide clock to UART0  */
+    (*((volatile uint32_t *)(0x400FE618))) |= 1;
+    /* Enable clock to PortA  */
+    (*((volatile uint32_t *)(0x400FE608))) |= 1;
+    /* Disable UART0 Control  */
+    (*((volatile uint32_t *)(0x4000C030))) = 0;
+    /* Set UART0_IBRD_R for 115,200 baud */
+    (*((volatile uint32_t *)(0x4000C024))) = 8;
+    /* Set UART0_FBRD_R for 115,200 baud */
+    (*((volatile uint32_t *)(0x4000C028))) = 44;
+    /* Use System Clock */
+    (*((volatile uint32_t *)(0x4000CFC8))) = 0;
+    /* Use 8-bit word length, 1 stop bit, no parity */
+    (*((volatile uint32_t *)(0x4000C02C))) = 0x60;
+    /* Enable UART0 Control  */
+    (*((volatile uint32_t *)(0x4000C030))) = 0x301;
+    /*************************************************/
+    /* The OR operation sets the bits that are OR'ed */
+    /* with a 1.  To translate the following lines   */
+    /* to assembly, load the data, OR the data with  */
+    /* the mask and store the result back.           */
+    /*************************************************/
+    /* Make PA0 and PA1 as Digital Ports  */
+    (*((volatile uint32_t *)(0x4000451C))) |= 0x03;
+    /* Change PA0,PA1 to Use an Alternate Function  */
+    (*((volatile uint32_t *)(0x40004420))) |= 0x03;
+    /* Configure PA0 and PA1 for UART  */
+    (*((volatile uint32_t *)(0x4000452C))) |= 0x11;
+}
+
+void configure_PLL()
+{
+    //Powerup the PLL
+    (*((volatile uint32_t *)(0x400FE160))) |= (1 << 23);
+
+    //Wait for PLL to be locked.
+    while(*((volatile uint32_t*)(0x400FE168)) != 1) {}
+
+    //Disable the PLL.
+    (*((volatile uint32_t *)(0x400FE160))) &= ~(1 << 23);
+}
+
+void adc_module_init(int module_id)
+{
+    //Enable the ADC clock using the RCGCADC register
+    (*((volatile uint32_t *)(RCGCADC))) |= (1 << module_id);
+    }
+
+void adc_sequencer_init(int module_id, int sequencer_id, int trigger_event, int input_source, int sample_control)
+{
+    uint32_t adc_addr = ADC_BASE + (0x1000 * module_id);
+
+    //Disable the sequencer
+    (*((volatile uint32_t *)(adc_addr))) &= ~(1 << sequencer_id);
+
+    //Set sequencer triggering event.
+    (*((volatile uint32_t *)(adc_addr + 0x014))) |= trigger_event;
+
+    //Select input source.
+    if(input_source > 15) (*((volatile uint32_t *)(0x400390B8))) |= 1;
+    (*((volatile uint32_t *)(adc_addr + 0x080))) = input_source;
+
+    //Configure sample control bits. Setting END bit is important.
+    (*((volatile uint32_t *)(adc_addr + 0x084))) |= sample_control;
+
+    //Configuration done. Enable SS3.
+    (*((volatile uint32_t *)(adc_addr))) |= (1 << sequencer_id);
+}
+
+void gpio_port_init(int port)
+{
+    //Enable clock to GPIO Port.
+    (*((volatile uint32_t *)(RCGCGPIO))) |= port;
+}
+
+void joystick_horiz_init()
+{
+    gpio_port_init(0x10);
+
+    //Set GPIO Port E Pin 3 to use AFSEL.
+    (*((volatile uint32_t *)(0x4005C420))) |= (1 << 3);
+
+    //Set GPIO Port E Pin 3 to be analog.
+    (*((volatile uint32_t *)(0x4005C51C))) &= ~(1 << 3);
+
+    //Set GPIO Port E Pin 3 to select GPIO analog mode.
+    (*((volatile uint32_t *)(0x4005C528))) |= (1 << 3);
+
+    adc_module_init(0);
+    configure_PLL();
+    adc_sequencer_init(0, 3, (0xF << 12), 9, 2);
+}
+
+void joystick_init()
+{
+    joystick_horiz_init();
+
+}
+
+void int2string(char* string, uint32_t num)
+{
+    char* temp = string;
+    int num_digits;
+    uint32_t remainder;
+    int stack[15];
+    int stack_index = 0;
+
+    num_digits = 0;
+    if(num == 0) goto i2s_zero;
+
+i2s_digits:
+    if(num == 0) goto i2s_reverse_digits;
+    remainder = num % 10;
+    stack[stack_index++] = remainder;
+    num /= 10;
+    num_digits++;
+    goto i2s_digits;
+
+i2s_zero:
+    *string++ = 0x30;
+    goto i2s_end;
+
+i2s_reverse_digits:
+    remainder = stack[--stack_index];
+    *string++ = (remainder + '0');
+    num_digits--;
+    if(num_digits != 0) goto i2s_reverse_digits;
+
+i2s_end:
+    *string = 0x0;  //Null terminate string
+    string = temp;
+}
+
+void output_string(char* string)
+{
+    char* temp = string;
+    char character;
+
+output_string_loop:
+    character = *temp++;
+    if(character == 0) return;
+    output_character(character);
+    goto output_string_loop;
+}
+
+void output_character(char character)
+{
+    volatile uint32_t* uartfr = (volatile uint32_t*) 0x4000C018;
+    volatile uint32_t* uartdr = (volatile uint32_t*) 0x4000C000;
+    uint8_t flag;
+    do
+    {
+        flag = *uartfr & 0x20;
+    } while(flag != 0);
+
+    *uartdr = character;
+}
+
+int main(void)
+{
+    serial_init();
+    joystick_init();
+
+    while (1)
+    {
+        char string[5];
+        int32_t num = (*((volatile uint32_t *)(0x400380A8)));
+        int2string(string, num);
+        output_string(string);
+        output_character(0xA);
+        output_character(0xD);
+        int i;
+        for(i = 0; i < 1000000; i++){}
+    }
+
+    return 0;
+}

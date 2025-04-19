@@ -17,6 +17,7 @@ GPIO.obj: C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.
 GPIO.obj: C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
 GPIO.obj: ../ADC.h
 GPIO.obj: ../GPIO.h
+GPIO.obj: ../TempSensor.h
 
 ../GPIO.c:
 
@@ -51,4 +52,6 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../ADC.h:
 
 ../GPIO.h:
+
+../TempSensor.h:
 

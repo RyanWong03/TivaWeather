@@ -9,6 +9,7 @@
 //Local includes
 #include "ADC.h"
 #include "GPIO.h"
+#include "TempSensor.h"
 
 
 #endif /* MAIN_H_ */

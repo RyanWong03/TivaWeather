@@ -3,5 +3,11 @@
 
 #define RCGCGPIO    0x400FE608
 
+#define GPIOAFSEL   0x4005C420
+#define GPIODEN     0x4005C51C
+#define GPIOAMSEL   0x4005C528
+
+#define PORTE       0x10
+
 void gpio_port_init(int port);
 #endif /* GPIO_H_ */

@@ -8,13 +8,13 @@ void TempSensorInit()
     gpio_port_init(PORTE);
 
     //Set GPIO Port E Pin 5 to use AFSEL.
-    (*((volatile uint32_t *)(GPIOPORTE + GPIOAFSEL))) |= (1 << 5);
+    HWREG(GPIOPORTE + GPIOAFSEL) |= (1 << 5);
 
     //Set GPIO Port E Pin 5 to be analog.
-    (*((volatile uint32_t *)(GPIOPORTE + GPIODEN))) &= ~(1 << 5);
+    HWREG(GPIOPORTE + GPIODEN) &= ~(1 << 5);
 
     //Set GPIO Port E Pin 5 to select GPIO analog mode.
-    (*((volatile uint32_t *)(GPIOPORTE + GPIOAMSEL))) |= (1 << 5);
+    HWREG(GPIOPORTE + GPIOAMSEL) |= (1 << 5);
 
     adc_module_init(0);
     configure_PLL();

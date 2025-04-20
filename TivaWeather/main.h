@@ -12,5 +12,6 @@
 #include "LCD.h"
 #include "TempSensor.h"
 
+#define HWREG(x) (*(volatile uint32_t *)(x))
 
 #endif /* MAIN_H_ */

@@ -8,6 +8,7 @@
 #define GPIOPORTP   0x40065000
 #define GPIOPORTQ   0x40066000
 
+#define GPIODATA    0x3FC
 #define GPIODIR     0x400
 #define GPIOAFSEL   0x420
 #define GPIODEN     0x51C

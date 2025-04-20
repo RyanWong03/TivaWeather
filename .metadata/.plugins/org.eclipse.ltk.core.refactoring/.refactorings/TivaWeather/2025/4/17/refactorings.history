@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;TivaWeather/SPI.c&apos; to &apos;LCD.c&apos;" description="Rename resource &apos;SPI.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SPI.c" name="LCD.c" stamp="1745158765838" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;TivaWeather/SPI.h&apos; to &apos;LCD.h&apos;" description="Rename resource &apos;SPI.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SPI.h" name="LCD.h" stamp="1745158770128" updateReferences="true"/>
+</session>

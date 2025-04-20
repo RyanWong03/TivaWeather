@@ -46,11 +46,57 @@ void LCD_init()
     //Set the SSI clock source to be the PIOSC.
     HWREG(SSI3 + SSICC) |= 0x5;
 
-    //The Tiva clock runs at 120 MHz. The LCD supports up to 20 FPS. Set divisor to 15 to get 8 MHz.
+    //Set prescale divisor to 4.
+    HWREG(SSI3 + SSICPSR) |= 0x4;
 
+    //Set SSI Module 3 to use 8-bit data.
+    HWREG(SSI3 + SSICR0) |= 0x8;
+
+    //Enable SSI Module 3.
+    HWREG(SSI3 + SSICR1) |= 0x3;    //Set loopback mode on for debugging.
+
+    send_LCD_command(LCD_DISPLAY_OFF);
 }
 
 void unlatch_CS_LCD()
 {
     HWREG(GPIOPORTP + GPIODATA) &= ~(1 << 3);
+}
+
+void latch_CS_LCD()
+{
+    HWREG(GPIOPORTP + GPIODATA) |= (1 << 3);
+}
+
+void poll_tx_buffer()
+{
+    while(HWREG(SSI3 + SSISR) & 0x2 != 0x2);
+}
+
+void poll_transmission_complete()
+{
+    while(HWREG(SSI3 + SSISR) & 0x10 == 0x10);
+}
+
+void delay()
+{
+
+}
+
+void send_LCD_command(int command)
+{
+    unlatch_CS_LCD();
+
+    //Set PK7 (RS bit) low.
+    HWREG(GPIOPORTK + GPIODATA) &= ~(1 << 7);
+
+    poll_tx_buffer();
+
+    HWREG(SSI3 + SSIDR) = command;
+
+    poll_transmission_complete();
+
+    latch_CS_LCD();
+
+    delay(50);
 }

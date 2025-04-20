@@ -6,6 +6,7 @@
 int main(void)
 {
     TempSensorInit();
+    LCD_init();
 
     while(1){}
 	return 0;

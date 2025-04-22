@@ -6,16 +6,17 @@ import './App.css'
 function App() {
   const [temperature, setTemperature] = useState(null);
 
-  const getTemperature = () => {
-    // simulate a fetch (replace this with real sensor/backend later)
-    const fakeTemp = Math.floor(Math.random() * 10 + 20); // random between 20–30°C
-    setTemperature(fakeTemp);
+  const fetchTemperature = () => {
+    fetch('http://127.0.0.1:5000/api/temperature')
+      .then((response) => response.json())
+      .then((data) => setTemperature(data.temperature))
+      .catch((error) => console.error('Error fetching temperature:', error));
   };
 
   return (
     <div>
       <h1>Room Temp Viewer 🌡️</h1>
-      <button onClick={getTemperature}>View Temperature</button>
+      <button onClick={fetchTemperature}>View Temperature</button>
       {temperature !== null && (
         <p>Current temperature: {temperature}°C</p>
       )}

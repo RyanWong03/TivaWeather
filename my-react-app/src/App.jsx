@@ -19,6 +19,11 @@ function App() {
       {temperature !== null && (
         <p>Current temperature: {temperature}°C</p>
       )}
+      
+      <br></br>
+      <br></br>
+      
+      <button>Turn on Fan</button>
     </div>
   );
 }

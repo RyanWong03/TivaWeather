@@ -1,0 +1,57 @@
+#include "main.h"
+
+//LCD SPI clock =   PQ0
+//LCD SPI CS    =   PP3
+//LCD SPI MOSI  =   PQ2
+//LCD reset     =
+//LCD RS        =   PK7
+void LCD_init()
+{
+    //Initialize SSI Module 3. LCD is connected to this.
+    HWREG(RCGCSSI) |= (1 << 3);
+
+    gpio_port_init(PORTK | PORTP | PORTQ);
+
+    //Set PQ0 & PQ2 as digital.
+    HWREG(GPIOPORTQ + GPIODEN) |= ((1 << 0) | (1 << 2));
+
+    //Set PQ0 & PQ2 to use their alternate function.
+    HWREG(GPIOPORTQ + GPIOAFSEL) |= ((1 << 0) | (1 << 2));
+
+    //Set PQ0 & PQ2 to use SSI3 as their alternate function. This is option 14.
+    uint32_t mask = 0xFFFFF0F0;
+    uint32_t current = HWREG(GPIOPORTQ + GPIOPCTL);
+    current &= mask;
+    current |= 0x00000E0E;
+    HWREG(GPIOPORTQ + GPIOPCTL) = current;
+
+    //Set PP3 as digital.
+    HWREG(GPIOPORTP + GPIODEN) |= ((1 << 3));
+
+    //Set PP3 as output.
+    HWREG(GPIOPORTP + GPIODIR) |= ((1 << 3));
+
+    //Unsure if this is necessary here. I did this for the LCD on the daughterboard.
+    unlatch_CS_LCD();
+
+    //Set PK7 as digital.
+    HWREG(GPIOPORTK + GPIODEN) |= ((1 << 7));
+
+    //Set PK7 as output.
+    HWREG(GPIOPORTK + GPIODIR) |= ((1 << 3));
+
+    //Disable SSI Module 3 and set it to Master.
+    HWREG(SSI3 + SSICR1) &= ~(3 << 1);
+
+    //Set the SSI clock source to be the PIOSC.
+    HWREG(SSI3 + SSICC) |= 0x5;
+
+    //Set prescale divisor to 4.
+    HWREG(SSI3 + SSICPSR) |= 0x4;
+
+}
+
+void unlatch_CS_LCD()
+{
+    HWREG(GPIOPORTP + GPIODATA) &= ~(1 << 3);
+}

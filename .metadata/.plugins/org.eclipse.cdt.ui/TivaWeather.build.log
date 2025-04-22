@@ -3,37 +3,29 @@
 
 "C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
  
-Building file: "../ADC.c"
-Invoking: Arm Compiler
-"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ADC.d_raw"  "../ADC.c"
-Finished building: "../ADC.c"
- 
-Building file: "../GPIO.c"
-Invoking: Arm Compiler
-"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="GPIO.d_raw"  "../GPIO.c"
-Finished building: "../GPIO.c"
- 
 Building file: "../LCD.c"
 Invoking: Arm Compiler
 "C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="LCD.d_raw"  "../LCD.c"
+"../LCD.c", line 96: warning #225-D: function "delay" declared implicitly
 Finished building: "../LCD.c"
- 
-Building file: "../TempSensor.c"
-Invoking: Arm Compiler
-"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="TempSensor.d_raw"  "../TempSensor.c"
-Finished building: "../TempSensor.c"
- 
-Building file: "../main.c"
-Invoking: Arm Compiler
-"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
-"../main.c", line 11: warning #112-D: statement is unreachable
-Finished building: "../main.c"
  
 Building target: "TivaWeather.out"
 Invoking: Arm Linker
 "C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
 <Linking>
-Finished building target: "TivaWeather.out"
  
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ delay     ./LCD.obj       
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "TivaWeather.out" not built
+ 
+>> Compilation failure
+makefile:140: recipe for target 'TivaWeather.out' failed
+gmake[1]: *** [TivaWeather.out] Error 1
+makefile:136: recipe for target 'all' failed
+gmake: *** [all] Error 2
 
 **** Build Finished ****

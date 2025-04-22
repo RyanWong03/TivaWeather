@@ -1,0 +1,16 @@
+#ifndef LCD_H_
+#define LCD_H_
+
+#define RCGCSSI 0x400FE61C
+#define SSI3    0x4000B000
+
+#define SSICR0  0x000
+#define SSICR1  0x004
+#define SSICPSR 0x010
+#define SSICC   0xFC8
+
+void LCD_init();
+void unlatch_CS_LCD();
+void poll_tx_buffer();
+
+#endif /* LCD_H_ */

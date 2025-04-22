@@ -1,0 +1,16 @@
+#ifndef GPIO_H_
+#define GPIO_H_
+
+#define RCGCGPIO    0x400FE608
+
+#define GPIOPORTK   0x40061000
+
+#define GPIOAFSEL   0x420
+#define GPIODEN     0x51C
+#define GPIOAMSEL   0x528
+
+#define PORTK       0x200
+
+void gpio_port_init(int port);
+
+#endif /* GPIO_H_ */

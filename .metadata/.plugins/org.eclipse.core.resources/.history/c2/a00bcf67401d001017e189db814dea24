@@ -1,0 +1,8 @@
+#include "main.h"
+
+/*
+ * Initializes the LM45 Temperature sensor on the Alice Edubase Board.*/
+void TempSensorInit()
+{
+
+}

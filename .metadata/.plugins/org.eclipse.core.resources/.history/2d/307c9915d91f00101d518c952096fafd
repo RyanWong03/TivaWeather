@@ -38,7 +38,7 @@ void LCD_init()
     HWREG(GPIOPORTK + GPIODEN) |= ((1 << 7));
 
     //Set PK7 as output.
-    HWREG(GPIOPORTK + GPIODIR) |= ((1 << 7));
+    HWREG(GPIOPORTK + GPIODIR) |= ((1 << 3));
 
     //Disable SSI Module 3 and set it to Master.
     HWREG(SSI3 + SSICR1) &= ~(3 << 1);
@@ -84,7 +84,6 @@ void delay(int ms)
     volatile int count = 4000000;
     for(i = 0; i < ms; i++)
     {
-        volatile int count = 4000000;
         while(count-- > 0)
         {
 
@@ -107,11 +106,11 @@ void send_LCD_command(int command)
 
     latch_CS_LCD();
 
-    delay(50);
+    delay(2);
 
     unlatch_CS_LCD();
 
     poll_tx_buffer();
 
-    delay(50);
+    delay(2);
 }

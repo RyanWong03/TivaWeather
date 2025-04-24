@@ -11,6 +11,7 @@ CMD_SRCS += \
 C_SRCS += \
 ../ADC.c \
 ../GPIO.c \
+../LCD.c \
 ../TempSensor.c \
 ../main.c \
 ../tm4c1294ncpdt_startup_ccs.c 
@@ -18,6 +19,7 @@ C_SRCS += \
 C_DEPS += \
 ./ADC.d \
 ./GPIO.d \
+./LCD.d \
 ./TempSensor.d \
 ./main.d \
 ./tm4c1294ncpdt_startup_ccs.d 
@@ -25,6 +27,7 @@ C_DEPS += \
 OBJS += \
 ./ADC.obj \
 ./GPIO.obj \
+./LCD.obj \
 ./TempSensor.obj \
 ./main.obj \
 ./tm4c1294ncpdt_startup_ccs.obj 
@@ -32,6 +35,7 @@ OBJS += \
 OBJS__QUOTED += \
 "ADC.obj" \
 "GPIO.obj" \
+"LCD.obj" \
 "TempSensor.obj" \
 "main.obj" \
 "tm4c1294ncpdt_startup_ccs.obj" 
@@ -39,6 +43,7 @@ OBJS__QUOTED += \
 C_DEPS__QUOTED += \
 "ADC.d" \
 "GPIO.d" \
+"LCD.d" \
 "TempSensor.d" \
 "main.d" \
 "tm4c1294ncpdt_startup_ccs.d" 
@@ -46,6 +51,7 @@ C_DEPS__QUOTED += \
 C_SRCS__QUOTED += \
 "../ADC.c" \
 "../GPIO.c" \
+"../LCD.c" \
 "../TempSensor.c" \
 "../main.c" \
 "../tm4c1294ncpdt_startup_ccs.c" 

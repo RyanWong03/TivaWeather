@@ -17,6 +17,7 @@ TempSensor.obj: C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/s
 TempSensor.obj: C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
 TempSensor.obj: ../ADC.h
 TempSensor.obj: ../GPIO.h
+TempSensor.obj: ../LCD.h
 TempSensor.obj: ../TempSensor.h
 
 ../TempSensor.c:
@@ -52,6 +53,8 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../ADC.h:
 
 ../GPIO.h:
+
+../LCD.h:
 
 ../TempSensor.h:
 

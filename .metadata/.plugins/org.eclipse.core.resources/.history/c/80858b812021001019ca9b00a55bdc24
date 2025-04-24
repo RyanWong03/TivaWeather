@@ -1,0 +1,8 @@
+#include "main.h"
+
+void output_character(char character)
+{
+    while(HWREG(UART0FR) &= 0x20 != 0);
+
+    HWREG(UART0DR) = character;
+}

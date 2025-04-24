@@ -6,12 +6,13 @@
 int main(void)
 {
     TempSensorInit();
+    UART0_init();
 
     while(1){
         volatile uint32_t* ADC_reading = (volatile uint32_t*)(ADC_BASE + ADCSSFIFO3);
         float voltage = (*ADC_reading * 3.3) / 4096;
         float celsius_temp = voltage * 100;
-
+        output_character('a');
     }
 	return 0;
 }

@@ -19,6 +19,7 @@ GPIO.obj: ../ADC.h
 GPIO.obj: ../GPIO.h
 GPIO.obj: ../LCD.h
 GPIO.obj: ../TempSensor.h
+GPIO.obj: ../UART.h
 
 ../GPIO.c:
 
@@ -57,4 +58,6 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../LCD.h:
 
 ../TempSensor.h:
+
+../UART.h:
 

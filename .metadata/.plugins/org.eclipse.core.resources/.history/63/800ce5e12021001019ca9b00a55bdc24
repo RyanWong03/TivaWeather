@@ -1,0 +1,9 @@
+#ifndef UART_H_
+#define UART_H_
+
+#define UART0FR 0x4000C018
+#define UART0DR 0x4000C000
+
+void output_character(char character);
+
+#endif /* UART_H_ */

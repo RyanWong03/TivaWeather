@@ -13,6 +13,7 @@ C_SRCS += \
 ../GPIO.c \
 ../LCD.c \
 ../TempSensor.c \
+../UART.c \
 ../main.c \
 ../tm4c1294ncpdt_startup_ccs.c 
 
@@ -21,6 +22,7 @@ C_DEPS += \
 ./GPIO.d \
 ./LCD.d \
 ./TempSensor.d \
+./UART.d \
 ./main.d \
 ./tm4c1294ncpdt_startup_ccs.d 
 
@@ -29,6 +31,7 @@ OBJS += \
 ./GPIO.obj \
 ./LCD.obj \
 ./TempSensor.obj \
+./UART.obj \
 ./main.obj \
 ./tm4c1294ncpdt_startup_ccs.obj 
 
@@ -37,6 +40,7 @@ OBJS__QUOTED += \
 "GPIO.obj" \
 "LCD.obj" \
 "TempSensor.obj" \
+"UART.obj" \
 "main.obj" \
 "tm4c1294ncpdt_startup_ccs.obj" 
 
@@ -45,6 +49,7 @@ C_DEPS__QUOTED += \
 "GPIO.d" \
 "LCD.d" \
 "TempSensor.d" \
+"UART.d" \
 "main.d" \
 "tm4c1294ncpdt_startup_ccs.d" 
 
@@ -53,6 +58,7 @@ C_SRCS__QUOTED += \
 "../GPIO.c" \
 "../LCD.c" \
 "../TempSensor.c" \
+"../UART.c" \
 "../main.c" \
 "../tm4c1294ncpdt_startup_ccs.c" 
 

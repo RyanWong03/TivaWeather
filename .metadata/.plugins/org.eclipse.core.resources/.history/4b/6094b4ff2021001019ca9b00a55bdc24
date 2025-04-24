@@ -1,0 +1,34 @@
+#include "main.h"
+
+void UART0_init()
+{
+    /* Provide clock to UART0  */
+    HWREG(0x400FE618) = UART0;
+    /* Enable clock to PortA  */
+    HWREG(0x400FE608) = PORTA;
+    /* Disable UART0 Control  */
+    HWREG(0x4000C030) = 0;
+    /* Set UART0_IBRD_R for 115,200 baud */
+    HWREG(0x4000C024) = 8;
+    /* Set UART0_FBRD_R for 115,200 baud */
+    HWREG(0x4000C028) = 44;
+    /* Use System Clock */
+    HWREG(0x4000CFC8) = 0;
+    /* Use 8-bit word length, 1 stop bit, no parity */
+    HWREG(0x4000C02C) = 0x60;
+    /* Enable UART0 Control  */
+    HWREG(0x4000C030) = 0x301;
+    /* Make PA0 and PA1 as Digital Ports  */
+    HWREG(0x4000451C) |= 0x03;
+    /* Change PA0,PA1 to Use an Alternate Function  */
+    HWREG(0x40004420) |= 0x03;
+    /* Configure PA0 and PA1 for UART  */
+    HWREG(0x4000452C) |= 0x11;
+}
+
+void output_character(char character)
+{
+    while(HWREG(UART0FR) &= 0x20 != 0);
+
+    HWREG(UART0DR) = character;
+}

@@ -19,6 +19,7 @@ TempSensor.obj: ../ADC.h
 TempSensor.obj: ../GPIO.h
 TempSensor.obj: ../LCD.h
 TempSensor.obj: ../TempSensor.h
+TempSensor.obj: ../UART.h
 
 ../TempSensor.c:
 
@@ -57,4 +58,6 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../LCD.h:
 
 ../TempSensor.h:
+
+../UART.h:
 

@@ -1,0 +1,15 @@
+#include "main.h"
+
+/**
+ * main.c
+ */
+int main(void)
+{
+    TempSensorInit();
+
+    while(1){
+        volatile uint32_t* test = HWREG(ADC_BASE + ADCSSFIFO3);
+
+    }
+	return 0;
+}

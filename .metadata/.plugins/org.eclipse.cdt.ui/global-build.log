@@ -1782,3 +1782,461 @@ Finished building target: "TivaWeather.out"
 gmake[1]: 'TivaWeather.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 18: error #20: identifier "i" is undefined
+"../main.c", line 14: warning #179-D: variable "celsius_temp" was declared but never referenced
+"../main.c", line 20: warning #112-D: statement is unreachable
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 18: error #20: identifier "i" is undefined
+"../main.c", line 14: warning #179-D: variable "celsius_temp" was declared but never referenced
+"../main.c", line 20: warning #112-D: statement is unreachable
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 14: warning #179-D: variable "celsius_temp" was declared but never referenced
+"../main.c", line 20: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'TivaWeather.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../library.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="library.d_raw"  "../library.c"
+Finished building: "../library.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../library.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="library.d_raw"  "../library.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'library.obj' failed
+"../library.c", line 19: error #20: identifier "value" is undefined
+"../library.c", line 37: error #20: identifier "buffer" is undefined
+2 errors detected in the compilation of "../library.c".
+gmake: *** [library.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../library.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="library.d_raw"  "../library.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'library.obj' failed
+"../library.c", line 19: error #20: identifier "value" is undefined
+1 error detected in the compilation of "../library.c".
+gmake: *** [library.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../library.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="library.d_raw"  "../library.c"
+Finished building: "../library.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 16: warning #169-D: argument of type "char (*)[5]" is incompatible with parameter of type "char"
+"../main.c", line 16: error #141: too many arguments in function call
+"../main.c", line 21: warning #112-D: statement is unreachable
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #225-D: function "int2string" declared implicitly
+"../main.c", line 21: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../ADC.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ADC.d_raw"  "../ADC.c"
+Finished building: "../ADC.c"
+ 
+Building file: "../GPIO.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="GPIO.d_raw"  "../GPIO.c"
+Finished building: "../GPIO.c"
+ 
+Building file: "../LCD.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="LCD.d_raw"  "../LCD.c"
+Finished building: "../LCD.c"
+ 
+Building file: "../TempSensor.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="TempSensor.d_raw"  "../TempSensor.c"
+Finished building: "../TempSensor.c"
+ 
+Building file: "../UART.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="UART.d_raw"  "../UART.c"
+Finished building: "../UART.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #169-D: argument of type "char (*)[5]" is incompatible with parameter of type "char *"
+"../main.c", line 21: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 21: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 16: warning #179-D: variable "stringcpy" was declared but never referenced
+"../main.c", line 23: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 18: warning #225-D: function "output_string" declared implicitly
+"../main.c", line 23: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+ 
+ undefined     first referenced
+  symbol           in file     
+ ---------     ----------------
+ output_string ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "TivaWeather.out" not built
+ 
+>> Compilation failure
+makefile:142: recipe for target 'TivaWeather.out' failed
+gmake[1]: *** [TivaWeather.out] Error 1
+makefile:138: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../GPIO.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="GPIO.d_raw"  "../GPIO.c"
+Finished building: "../GPIO.c"
+ 
+Building file: "../ADC.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ADC.d_raw"  "../ADC.c"
+Finished building: "../ADC.c"
+ 
+Building file: "../LCD.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="LCD.d_raw"  "../LCD.c"
+Finished building: "../LCD.c"
+ 
+Building file: "../TempSensor.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="TempSensor.d_raw"  "../TempSensor.c"
+Finished building: "../TempSensor.c"
+ 
+Building file: "../UART.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="UART.d_raw"  "../UART.c"
+Finished building: "../UART.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 23: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+ 
+ undefined     first referenced
+  symbol           in file     
+ ---------     ----------------
+ output_string ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "TivaWeather.out" not built
+ 
+>> Compilation failure
+makefile:142: recipe for target 'TivaWeather.out' failed
+gmake[1]: *** [TivaWeather.out] Error 1
+makefile:138: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../UART.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="UART.d_raw"  "../UART.c"
+Finished building: "../UART.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'TivaWeather.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 26: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 26: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 26: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'TivaWeather.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project TivaWeather ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/ryanw/Downloads/TivaWeather/TivaWeather" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 26: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "TivaWeather.out"
+Invoking: Arm Linker
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TivaWeather.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TivaWeather_linkInfo.xml" --rom_model -o "TivaWeather.out" "./ADC.obj" "./GPIO.obj" "./LCD.obj" "./TempSensor.obj" "./UART.obj" "./library.obj" "./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "../tm4c1294ncpdt.cmd"  -llibc.a 
+<Linking>
+Finished building target: "TivaWeather.out"
+ 
+
+**** Build Finished ****

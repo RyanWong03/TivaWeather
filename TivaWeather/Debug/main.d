@@ -20,6 +20,7 @@ main.obj: ../GPIO.h
 main.obj: ../LCD.h
 main.obj: ../TempSensor.h
 main.obj: ../UART.h
+main.obj: ../library.h
 
 ../main.c:
 
@@ -60,4 +61,6 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../TempSensor.h:
 
 ../UART.h:
+
+../library.h:
 

@@ -14,6 +14,7 @@ C_SRCS += \
 ../LCD.c \
 ../TempSensor.c \
 ../UART.c \
+../library.c \
 ../main.c \
 ../tm4c1294ncpdt_startup_ccs.c 
 
@@ -23,6 +24,7 @@ C_DEPS += \
 ./LCD.d \
 ./TempSensor.d \
 ./UART.d \
+./library.d \
 ./main.d \
 ./tm4c1294ncpdt_startup_ccs.d 
 
@@ -32,6 +34,7 @@ OBJS += \
 ./LCD.obj \
 ./TempSensor.obj \
 ./UART.obj \
+./library.obj \
 ./main.obj \
 ./tm4c1294ncpdt_startup_ccs.obj 
 
@@ -41,6 +44,7 @@ OBJS__QUOTED += \
 "LCD.obj" \
 "TempSensor.obj" \
 "UART.obj" \
+"library.obj" \
 "main.obj" \
 "tm4c1294ncpdt_startup_ccs.obj" 
 
@@ -50,6 +54,7 @@ C_DEPS__QUOTED += \
 "LCD.d" \
 "TempSensor.d" \
 "UART.d" \
+"library.d" \
 "main.d" \
 "tm4c1294ncpdt_startup_ccs.d" 
 
@@ -59,6 +64,7 @@ C_SRCS__QUOTED += \
 "../LCD.c" \
 "../TempSensor.c" \
 "../UART.c" \
+"../library.c" \
 "../main.c" \
 "../tm4c1294ncpdt_startup_ccs.c" 
 

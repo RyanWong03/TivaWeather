@@ -32,3 +32,8 @@ void output_character(char character)
 
     HWREG(UART0DR) = character;
 }
+
+void output_string(char* string)
+{
+    while(*string != 0x0) output_character(*string++);
+}

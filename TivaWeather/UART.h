@@ -14,5 +14,6 @@
 
 void UART0_init();
 void output_character(char character);
+void output_string(char* string);
 
 #endif /* UART_H_ */

@@ -1,0 +1,13 @@
+//Stores the integer as a string in the buffer passed in.
+void int2string(char* string, int number)
+{
+    int negative = 0;
+
+    if(number < 1)
+    {
+        negative = 1;
+        number = -number;
+    }
+
+
+}

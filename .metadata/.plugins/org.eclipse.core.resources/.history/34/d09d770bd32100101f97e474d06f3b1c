@@ -1,0 +1,4 @@
+void int2string(char* string, int number)
+{
+
+}

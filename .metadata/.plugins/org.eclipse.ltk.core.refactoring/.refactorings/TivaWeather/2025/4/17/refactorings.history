@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TivaWeather/library.s&apos; to &apos;library.c&apos;" description="Rename resource &apos;library.s&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="library.s" name="library.c" stamp="1745584737927" updateReferences="true"/>
+</session>

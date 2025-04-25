@@ -1,0 +1,22 @@
+#include "main.h"
+
+/**
+ * main.c
+ */
+int main(void)
+{
+    TempSensorInit();
+    UART0_init();
+
+    while(1){
+        volatile uint32_t* ADC_reading = (volatile uint32_t*)(ADC_BASE + ADCSSFIFO3);
+        float voltage = (*ADC_reading * 3.3) / 4096;
+        float celsius_temp = voltage * 100;
+        char string[5];
+        output_character(&string, celsius_temp);
+
+        int a = 0;
+        for(a = 0; a < 50000; a++){}
+    }
+	return 0;
+}

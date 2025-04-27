@@ -3,6 +3,7 @@
 
 #define RCGCADC     0x400FE638
 #define ADC_BASE    0x40038000
+#define ADCSSFIFO3  0xA8
 
 void configure_PLL();
 void adc_module_init(int module_id);

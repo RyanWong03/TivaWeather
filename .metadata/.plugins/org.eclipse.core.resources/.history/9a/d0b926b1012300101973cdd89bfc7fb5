@@ -1,0 +1,55 @@
+#include "main.h"
+
+void UART0_init()
+{
+    /* Provide clock to UART0  */
+    HWREG(RCGCUART) = UART0;
+    /* Enable clock to PortA  */
+    HWREG(RCGCGPIO) = PORTA;
+    /* Disable UART0 Control  */
+    HWREG(UART0DR + UARTCTL) = 0;
+    /* Set UART0_IBRD_R for 115,200 baud */
+    HWREG(UART0DR + UARTIBRD) = 8;
+    /* Set UART0_FBRD_R for 115,200 baud */
+    HWREG(UART0DR + UARTFBRD) = 44;
+    /* Use System Clock */
+    HWREG(UART0DR + UARTCC) = 0;
+    /* Use 8-bit word length, 1 stop bit, no parity */
+    HWREG(UART0DR + UARTLCRH) = 0x60;
+    /* Enable UART0 Control  */
+    HWREG(UART0DR + UARTCTL) = 0x301;
+    /* Make PA0 and PA1 as Digital Ports  */
+    HWREG(GPIOPORTA + GPIODEN) |= 0x03;
+    /* Change PA0,PA1 to Use an Alternate Function  */
+    HWREG(GPIOPORTA + GPIOAFSEL) |= 0x03;
+    /* Configure PA0 and PA1 for UART  */
+    HWREG(GPIOPORTA + GPIOPCTL) |= 0x11;
+}
+
+void output_character(char character)
+{
+    while((HWREG(UART0FR) & 0x20) != 0);
+
+    HWREG(UART0DR) = character;
+}
+
+void output_string(char* string)
+{
+    while(*string != 0x0) output_character(*string++);
+}
+
+void UART0_interrupt_init()
+{
+    HWREG(UART0DR) |= 0x10;
+
+}
+
+char simple_read_character()
+{
+    return HWREG(UART0DR);
+}
+
+void UART0_Handler()
+{
+
+}

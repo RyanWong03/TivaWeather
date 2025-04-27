@@ -11,6 +11,8 @@
 #include "GPIO.h"
 #include "LCD.h"
 #include "TempSensor.h"
+#include "UART.h"
+#include "library.h"
 
 #define HWREG(x) (*(volatile uint32_t *)(x))
 

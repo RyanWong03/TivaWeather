@@ -8,7 +8,6 @@ int main(void)
     TempSensorInit();
     UART0_init();
     UART0_interrupt_init();
-    RGB_LED_init();
 
     while(1){
         volatile uint32_t* ADC_reading = (volatile uint32_t*)(ADC_BASE + ADCSSFIFO3);

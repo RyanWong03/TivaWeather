@@ -56,6 +56,18 @@ void UART0_Handler()
 
     if(input == '1')
     {
-
+        illuminate_RGB_LED(0); // Red
+    }
+    else if(input == '2')
+    {
+        illuminate_RGB_LED(1); // Green
+    }
+    else if(input == '3')
+    {
+        illuminate_RGB_LED(2); // Blue
+    }
+    else if(input == '4')
+    {
+        illuminate_RGB_LED(3); // Off
     }
 }

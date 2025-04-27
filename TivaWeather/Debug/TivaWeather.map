@@ -1,17 +1,17 @@
 ******************************************************************************
                   TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Sun Apr 20 18:56:20 2025
+>> Linked Sat Apr 26 20:59:41 2025
 
 OUTPUT FILE NAME:   <TivaWeather.out>
-ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 0000045d
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 000007e5
 
 
 MEMORY CONFIGURATION
 
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
-  FLASH                 00000000   00100000  000004c0  000ffb40  R  X
+  FLASH                 00000000   00100000  0000085c  000ff7a4  R  X
   SRAM                  20000000   00040000  00000200  0003fe00  RW X
 
 
@@ -19,9 +19,9 @@ SEGMENT ALLOCATION MAP
 
 run origin  load origin   length   init length attrs members
 ----------  ----------- ---------- ----------- ----- -------
-00000000    00000000    000004c0   000004c0    r-x
+00000000    00000000    0000085c   0000085c    r-x
   00000000    00000000    00000208   00000208    r-- .intvecs
-  00000208    00000208    000002b8   000002b8    r-x .text
+  00000208    00000208    00000654   00000654    r-x .text
 20000000    20000000    00000200   00000000    rw-
   20000000    20000000    00000200   00000000    rw- .stack
 
@@ -34,16 +34,24 @@ section   page    origin      length       input sections
 .intvecs   0    00000000    00000208     
                   00000000    00000208     tm4c1294ncpdt_startup_ccs.obj (.intvecs)
 
-.text      0    00000208    000002b8     
-                  00000208    0000014c     LCD.obj (.text)
-                  00000354    000000b8     ADC.obj (.text)
-                  0000040c    00000050     TempSensor.obj (.text)
-                  0000045c    0000002c     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs:_c_int00_noinit_noargs)
-                  00000488    00000018     GPIO.obj (.text)
-                  000004a0    0000000c     main.obj (.text)
-                  000004ac    0000000c     tm4c1294ncpdt_startup_ccs.obj (.text)
-                  000004b8    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
-                  000004bc    00000004                                   : exit.c.obj (.text:abort:abort)
+.text      0    00000208    00000654     
+                  00000208    00000136     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_div_t2.asm.obj (.text)
+                  0000033e    00000002     --HOLE-- [fill = 0]
+                  00000340    00000104     UART.obj (.text)
+                  00000444    000000fc     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_mul_t2.asm.obj (.text)
+                  00000540    000000b8     ADC.obj (.text)
+                  000005f8    000000aa     library.obj (.text)
+                  000006a2    00000002     --HOLE-- [fill = 0]
+                  000006a4    00000080     main.obj (.text)
+                  00000724    0000006e     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_tos_t2.asm.obj (.text)
+                  00000792    00000002     --HOLE-- [fill = 0]
+                  00000794    00000050     TempSensor.obj (.text)
+                  000007e4    0000002c     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs:_c_int00_noinit_noargs)
+                  00000810    00000020                                   : u_tofd_t2.asm.obj (.text)
+                  00000830    00000018     GPIO.obj (.text)
+                  00000848    0000000c     tm4c1294ncpdt_startup_ccs.obj (.text)
+                  00000854    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00000858    00000004                                   : exit.c.obj (.text:abort:abort)
 
 .cinit     0    00000000    00000000     UNINITIALIZED
 
@@ -63,101 +71,114 @@ MODULE SUMMARY
        ------                          ----   -------   -------
     .\
        tm4c1294ncpdt_startup_ccs.obj   12     520       0      
-       LCD.obj                         332    0         0      
+       UART.obj                        260    0         0      
        ADC.obj                         184    0         0      
+       library.obj                     170    0         0      
+       main.obj                        128    0         0      
        TempSensor.obj                  80     0         0      
        GPIO.obj                        24     0         0      
-       main.obj                        12     0         0      
     +--+-------------------------------+------+---------+---------+
-       Total:                          644    520       0      
+       Total:                          858    520       0      
                                                                
     C:\ti\ccs1260\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       fd_div_t2.asm.obj               310    0         0      
+       fd_mul_t2.asm.obj               252    0         0      
+       fd_tos_t2.asm.obj               110    0         0      
        boot_cortex_m.c.obj             44     0         0      
+       u_tofd_t2.asm.obj               32     0         0      
        exit.c.obj                      4      0         0      
        pre_init.c.obj                  4      0         0      
     +--+-------------------------------+------+---------+---------+
-       Total:                          52     0         0      
+       Total:                          756    0         0      
                                                                
        Stack:                          0      0         512    
     +--+-------------------------------+------+---------+---------+
-       Grand Total:                    696    520       512    
+       Grand Total:                    1614   520       512    
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
 
-address   name                      
--------   ----                      
-000004bd  C$$EXIT                   
-00000209  LCD_init                  
-000004ad  ResetISR                  
-0000040d  TempSensorInit            
-20000200  __STACK_END               
-00000200  __STACK_SIZE              
-20000200  __STACK_TOP               
-ffffffff  __TI_pprof_out_hndl       
-ffffffff  __TI_prof_data_size       
-ffffffff  __TI_prof_data_start      
-00000000  __TI_static_base__        
-ffffffff  __binit__                 
-ffffffff  __c_args__                
-UNDEFED   __mpu_init                
-20000000  __stack                   
-20000000  __start___llvm_prf_cnts   
-20000000  __stop___llvm_prf_cnts    
-0000045d  _c_int00_noinit_noargs    
-000004b9  _system_pre_init          
-000004bd  abort                     
-0000037b  adc_module_init           
-00000393  adc_sequencer_init        
-ffffffff  binit                     
-00000355  configure_PLL             
-UNDEFED   delay                     
-00000000  g_pfnVectors              
-00000489  gpio_port_init            
-000002c5  latch_CS_LCD              
-000004a1  main                      
-000002db  poll_transmission_complete
-000002d1  poll_tx_buffer            
-000002e5  send_LCD_command          
-000002b9  unlatch_CS_LCD            
+address   name                   
+-------   ----                   
+00000859  C$$EXIT                
+00000849  ResetISR               
+00000795  TempSensorInit         
+000003e9  UART0_Handler          
+00000341  UART0_init             
+000003cb  UART0_interrupt_init   
+20000200  __STACK_END            
+00000200  __STACK_SIZE           
+20000200  __STACK_TOP            
+ffffffff  __TI_pprof_out_hndl    
+ffffffff  __TI_prof_data_size    
+ffffffff  __TI_prof_data_start   
+00000000  __TI_static_base__     
+00000725  __aeabi_d2f            
+00000209  __aeabi_ddiv           
+00000445  __aeabi_dmul           
+00000811  __aeabi_ui2d           
+ffffffff  __binit__              
+ffffffff  __c_args__             
+UNDEFED   __mpu_init             
+20000000  __stack                
+20000000  __start___llvm_prf_cnts
+20000000  __stop___llvm_prf_cnts 
+000007e5  _c_int00_noinit_noargs 
+00000855  _system_pre_init       
+00000859  abort                  
+00000567  adc_module_init        
+0000057f  adc_sequencer_init     
+ffffffff  binit                  
+00000541  configure_PLL          
+00000000  g_pfnVectors           
+00000831  gpio_port_init         
+000005f9  int2string             
+000006a5  main                   
+00000393  output_character       
+000003af  output_string          
+000003e1  simple_read_character  
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
 
-address   name                      
--------   ----                      
-00000000  __TI_static_base__        
-00000000  g_pfnVectors              
-00000200  __STACK_SIZE              
-00000209  LCD_init                  
-000002b9  unlatch_CS_LCD            
-000002c5  latch_CS_LCD              
-000002d1  poll_tx_buffer            
-000002db  poll_transmission_complete
-000002e5  send_LCD_command          
-00000355  configure_PLL             
-0000037b  adc_module_init           
-00000393  adc_sequencer_init        
-0000040d  TempSensorInit            
-0000045d  _c_int00_noinit_noargs    
-00000489  gpio_port_init            
-000004a1  main                      
-000004ad  ResetISR                  
-000004b9  _system_pre_init          
-000004bd  C$$EXIT                   
-000004bd  abort                     
-20000000  __stack                   
-20000000  __start___llvm_prf_cnts   
-20000000  __stop___llvm_prf_cnts    
-20000200  __STACK_END               
-20000200  __STACK_TOP               
-ffffffff  __TI_pprof_out_hndl       
-ffffffff  __TI_prof_data_size       
-ffffffff  __TI_prof_data_start      
-ffffffff  __binit__                 
-ffffffff  __c_args__                
-ffffffff  binit                     
-UNDEFED   __mpu_init                
-UNDEFED   delay                     
+address   name                   
+-------   ----                   
+00000000  __TI_static_base__     
+00000000  g_pfnVectors           
+00000200  __STACK_SIZE           
+00000209  __aeabi_ddiv           
+00000341  UART0_init             
+00000393  output_character       
+000003af  output_string          
+000003cb  UART0_interrupt_init   
+000003e1  simple_read_character  
+000003e9  UART0_Handler          
+00000445  __aeabi_dmul           
+00000541  configure_PLL          
+00000567  adc_module_init        
+0000057f  adc_sequencer_init     
+000005f9  int2string             
+000006a5  main                   
+00000725  __aeabi_d2f            
+00000795  TempSensorInit         
+000007e5  _c_int00_noinit_noargs 
+00000811  __aeabi_ui2d           
+00000831  gpio_port_init         
+00000849  ResetISR               
+00000855  _system_pre_init       
+00000859  C$$EXIT                
+00000859  abort                  
+20000000  __stack                
+20000000  __start___llvm_prf_cnts
+20000000  __stop___llvm_prf_cnts 
+20000200  __STACK_END            
+20000200  __STACK_TOP            
+ffffffff  __TI_pprof_out_hndl    
+ffffffff  __TI_prof_data_size    
+ffffffff  __TI_prof_data_start   
+ffffffff  __binit__              
+ffffffff  __c_args__             
+ffffffff  binit                  
+UNDEFED   __mpu_init             
 
-[33 symbols]
+[37 symbols]

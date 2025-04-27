@@ -37,3 +37,25 @@ void output_string(char* string)
 {
     while(*string != 0x0) output_character(*string++);
 }
+
+void UART0_interrupt_init()
+{
+    HWREG(UART0DR + UARTIM) |= 0x10;
+    HWREG(EN0ADDR + EN0) |= 0x20;
+}
+
+char simple_read_character()
+{
+    return HWREG(UART0DR);
+}
+
+void UART0_Handler()
+{
+    HWREG(UART0DR + UARTICR) |= 0x10;
+    char input = simple_read_character();
+
+    if(input == '1')
+    {
+
+    }
+}

@@ -19,6 +19,8 @@ ADC.obj: ../ADC.h
 ADC.obj: ../GPIO.h
 ADC.obj: ../LCD.h
 ADC.obj: ../TempSensor.h
+ADC.obj: ../UART.h
+ADC.obj: ../library.h
 
 ../ADC.c:
 
@@ -57,4 +59,8 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../LCD.h:
 
 ../TempSensor.h:
+
+../UART.h:
+
+../library.h:
 
